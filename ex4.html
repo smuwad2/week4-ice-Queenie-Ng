@@ -38,10 +38,10 @@
       {
          const btnElem = document.createElement("button");
          btnElem.innerText = "delete";
-         btnElem.onclick = function() 
+         btnElem.addEventListener('click', function()
          {
-            deleteItem(item);
-         };
+            deleteItem(item)
+         });
          item.appendChild(btnElem);
       }
 
