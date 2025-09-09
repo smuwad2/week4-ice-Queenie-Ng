@@ -31,6 +31,10 @@
          const liElem = document.createElement("li");
          liElem.innerText = itemVal;
          ulElem.appendChild(liElem);
+         const btnElem = document.createElement("button");
+         btnElem.innerText = "delete";
+         btnElem.addEventListener('click', deleteItem);
+         liElem.appendChild(btnElem);
       }
 
       const itemList = document.getElementsByTagName("li");
