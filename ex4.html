@@ -38,16 +38,14 @@
       {
          const btnElem = document.createElement("button");
          btnElem.innerText = "delete";
-         btnElem.addEventListener('click', function()
-         {
-            deleteItem(item)
-         });
+         btnElem.addEventListener('click', deleteItem);
          item.appendChild(btnElem);
       }
 
-      function deleteItem(item)
+      function deleteItem()
       {
          const ulElem = document.getElementsByTagName("ul")[0];
+         let item = this.parentNode;
          ulElem.removeChild(item);
       }
    </script>
